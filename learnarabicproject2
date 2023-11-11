@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Arabic</title>
+
+    <style>
+      .dark {
+        background: black;
+      }
+
+      button {
+        background: black;
+        color: white;
+        cursor: pointer;
+      }
+
+      .dark button {
+        background: white;
+        color: black;
+        cursor: pointer;
+      }
+      body {
+        margin: 200px;
+      }
+      img {
+        width: 200px;
+      }
+      .imagegrid {
+        margin: 60px auto;
+        display: grid;
+        width: 800px;
+        grid-template-columns: repeat(2, 400px);
+        grid-gap: 20px;
+      }
+
+      .imagegrid img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 45;
+        font-family: Verdana;
+        text-align: center;
+      }
+      h2 {
+        font-size: 35;
+        font-family: Verdana;
+        text-align: center;
+        color: #8b1a36;
+      }
+      body {
+        background-color: #e5d1bf;
+        font-family: Verdana;
+      }
+      .learn-button {
+        cursor: pointer;
+        padding: 20px 20px 20px 20px;
+        margin: 20px auto;
+        display: block;
+        color: white;
+        background-color: #1c63d7;
+        border: 1px solid #1c63d7;
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: 2px 2px 2px transparent;
+        transition: all 200ms ease-in-out;
+      }
+      .learn-button:hover {
+        background: #8c1b36;
+        color: white;
+        cursor: pointer;
+      }
+      p {
+        text-align: center;
+        font-family: Verdana;
+      }
+      .qatarpicture-1 {
+        width: 200px;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .qatarpicture-1:hover {
+        transform: scale(1.2);
+      }
+      .qatarpicture-2 {
+        width: 200px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .qatarpicture-2:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="darkButton">Dark Theme 🧛‍♀️</button>
+    <h1>Learn to Speak Arabic</h1>
+    <h2>
+      Learning to Speak Arabic Will Connect You to Millions of Speakers Around
+      the World
+    </h2>
+    <div class="imagegrid">
+      <img
+        src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/481000/481990-Doha-And-Vicinity.jpg"
+        alt="aerial view of qatar"
+        class="qatarpicture-1"
+        alt="Enlargement Example"
+      />
+      <img
+        src="https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/05/USE_Barco-y-Skyline-Doha-Qatar_Credit_GettyImages-978557114.jpg"
+        alt="sea view of qatar"
+        class="qatarpicture-2"
+      />
+
+      <img
+        src="https://freedomhouse.org/sites/default/files/2020-02/Qatar_Country_portal_shutterstock_1561475695-95.jpg"
+        alt="street image of qatar"
+        class="qatarpicture-3"
+      />
+      <img
+        src="https://content.tui.co.uk/adamtui/2023_7/5_12/fae87670-e234-4c3b-a9c3-b03600d355f0/LOC_003994_shutterstock_659644798WebOriginalCompressed.jpg?i10c=img.resize(width:1080);img.crop(width:1080%2Cheight:608)"
+        alt="night image of qatar"
+        class="qatarpicture-4"
+      />
+    </div>
+    <p>
+      Those who study Arabic can find careers in a variety of fields, including
+      Journalism, Business, Education, Finance and Banking, Translation and
+      Interpretation, Consulting, Foreign Service and Intelligence and many
+      more.A study of Arabic opens up endless possibilities and opportunities
+      for those who embark upon it. A rich and sophisticated language, spoken in
+      many varieties throughout the Middle East and North Africa, it is both
+      challenging and rewarding to learn.
+    </p>
+    <button class="learn-button">👉 Learn More</button>
+    <p class="footer">This page was built by Louise Charlotte Mackin</p>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      let darkButton = document.querySelector(".darkButton");
+      darkButton.addEventListener("click", changeTheme);
+
+      function changeLearn() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        if (name && email) {
+          alert("Shoukran! We will be in touch.");
+        } else {
+          alert("Please provide both your name and email.");
+        }
+      }
+
+      let learnButton = document.querySelector(".learn-button");
+      learnButton.addEventListener("click", changeLearn);
+    </script>
+  </body>
+</html>
